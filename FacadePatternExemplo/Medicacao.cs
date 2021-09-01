@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace FacadePatternExemplo
 {
-    class Medicacao
+    public class Medicacao
     {
         public bool VerificaMedicacao(List<string> medicamentos)
         {
-
             bool retorno = true;
 
             if (!medicamentos.Contains("Vermifugo"))
