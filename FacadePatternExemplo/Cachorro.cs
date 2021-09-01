@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace FacadePatternExemplo
 {
-    class Cachorro
+    public class Cachorro
     {
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
         public bool Reservado { get; set; }
-
         public List<string> Vacinas { get; set; }
         public List<string> Medicamentos { get; set; }
 
@@ -21,8 +19,6 @@ namespace FacadePatternExemplo
             Vacinas = vacinas;
             Medicamentos = medicamentos;
         }
-
-
 
         public Cachorro()
         {

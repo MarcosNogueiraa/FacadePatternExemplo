@@ -1,36 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FacadePatternExemplo
 {
-    class Adocao
+    public class Adocao
     {
-        Vacinacao vacinacao = new Vacinacao();
-        Medicacao medicacao= new Medicacao();
+        Vacinacao Vacinacao = new Vacinacao();
+        Medicacao Medicacao = new Medicacao();
+
         public bool IsAdotavel(Cachorro cachorro)
         {          
             bool adotavel = true;
-            // Check creditworthyness of applicant
-            if (!vacinacao.VerificaVacinas(cachorro.Vacinas))
+
+            if (!Vacinacao.VerificaVacinas(cachorro.Vacinas))
             {
                 adotavel = false;
                 Console.WriteLine($"A carteira de vacinas de {cachorro.Nome} está incompleta.");
             }
-            else if (!medicacao.VerificaMedicacao(cachorro.Medicamentos))
+            else if (!Medicacao.VerificaMedicacao(cachorro.Medicamentos))
             {
-                Console.WriteLine($"Carteira de vacinas completa.");
-                adotavel = false;
+                Console.WriteLine("Carteira de vacinas completa.");
                 Console.WriteLine($"{cachorro.Nome} não recebeu a medicação recomendada.");
 
+                adotavel = false;
             }
             else if (cachorro.Reservado)
             {
-                Console.WriteLine($"Carteira de vacinas completa e todos os medicamentos tomados.");
+                Console.WriteLine("Carteira de vacinas completa e todos os medicamentos tomados.");
+                Console.WriteLine($"{cachorro.Nome} está reservado.");
 
                 adotavel = false;
-                Console.WriteLine($"{cachorro.Nome} está reservado.");
             }
+
             return adotavel;
         }
     }
