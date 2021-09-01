@@ -11,8 +11,8 @@ namespace FacadePatternExemplo
             bool retorno = true;
 
 
-            if( !vacinas.Contains("Múltiplas: V8 e V10") &&
-                !vacinas.Contains("Traqueobronquite Infecciosa Canina") &&
+            if( !vacinas.Contains("Múltiplas: V8 e V10") ||
+                !vacinas.Contains("Traqueobronquite Infecciosa Canina") ||
                 !vacinas.Contains("Raiva"))
             {
                 retorno = false;
