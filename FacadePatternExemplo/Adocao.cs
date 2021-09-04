@@ -18,14 +18,12 @@ namespace FacadePatternExemplo
             }
             else if (!Medicacao.VerificaMedicacao(cachorro.Medicamentos))
             {
-                Console.WriteLine("Carteira de vacinas completa.");
                 Console.WriteLine($"{cachorro.Nome} não recebeu a medicação recomendada.");
 
                 adotavel = false;
             }
             else if (cachorro.Reservado)
             {
-                Console.WriteLine("Carteira de vacinas completa e todos os medicamentos tomados.");
                 Console.WriteLine($"{cachorro.Nome} está reservado.");
 
                 adotavel = false;
